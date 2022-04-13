@@ -6,7 +6,7 @@ pipeline {
       // For each commit
       stage('Lint Check') {
         steps{
-            sh 'npm install eslint'
+            sh 'echo lintcheck'
         }
       }
    } // end of stages
