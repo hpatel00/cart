@@ -1,7 +1,5 @@
 @Library('roboshop-shared-library@main') _
 
-sample.info 'Starting'
-
 pipeline {
    agent any
 
@@ -10,6 +8,9 @@ pipeline {
       // For each commit
       stage('Lint Check') {
         steps{
+            script {
+                sample.info('Starting', 'google.com')
+            }
             sh '''
                # We commented this out bc there are errors that the developers would need to fix
                #~/node_modules/jslint/bin/jslint.js server.js
